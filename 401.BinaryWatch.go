@@ -1,5 +1,9 @@
 package code
 
+import (
+	"strconv"
+)
+
 // https://leetcode.com/problems/binary-watch/
 
 func readBinaryWatch(num int) []string {
@@ -11,14 +15,14 @@ func readBinaryWatch(num int) []string {
 			ret = "0" + ret
 		}
 		cnt := count1(i)
-		fmt.Println(i, cnt)
+
 		minute[cnt] = append(minute[cnt], ret)
 		if i > 11 {
 			continue
 		}
 		hour[cnt] = append(hour[cnt], ret)
 	}
-	fmt.Println(hour, minute)
+
 	x_ret := []string{}
 	for j := 0; j <= num && j < 4; j++ {
 		for _, h := range hour[j] {
