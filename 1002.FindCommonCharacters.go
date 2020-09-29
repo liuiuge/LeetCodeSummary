@@ -15,9 +15,9 @@ func commonChars(A []string) []string {
 		}
 	}
 	for i, list := range tgt {
-		use := true
+
 		for j := 0; j < minval1002(list); j++ {
-			result = append(result, string([]rune(rune('a'+i))))
+			result = append(result, string([]rune{rune('a' + i)}))
 		}
 	}
 	return result

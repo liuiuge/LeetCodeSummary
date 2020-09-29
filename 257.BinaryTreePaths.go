@@ -17,7 +17,6 @@ type TreeNode struct {
 func binaryTreePaths(root *TreeNode) []string {
 	result := []string{}
 	nodes := []*TreeNode{root}
-	value := []string{}
 
 	for len(nodes) > 0 {
 		if nodes[len(nodes)-1].Left != nil {
@@ -38,7 +37,7 @@ func binaryTreePaths(root *TreeNode) []string {
 				nodes = nodes[:len(nodes)-1]
 			}
 			if len(nodes) > 0 {
-				nodes = append(nodes[len(nodes)-1].Right)
+				nodes = append(nodes, nodes[len(nodes)-1].Right)
 			}
 		}
 	}
