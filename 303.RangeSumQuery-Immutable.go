@@ -7,7 +7,7 @@ type NumArray struct {
 	s []int
 }
 
-func Constructor(nums []int) NumArray {
+func SConstructor(nums []int) NumArray {
 	n := NumArray{
 		n: nums,
 	}

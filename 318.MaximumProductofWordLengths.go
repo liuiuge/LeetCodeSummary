@@ -2,7 +2,7 @@ package code
 
 // https://leetcode.com/problems/maximum-product-of-word-lengths/
 
-func maxProduct(words []string) int {
+func maxProduct12(words []string) int {
 	max_cnt := 0
 	for i := 0; i < len(words)-1; i++ {
 		for j := i + 1; j < len(words); j++ {
