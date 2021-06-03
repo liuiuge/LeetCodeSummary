@@ -59,10 +59,10 @@ func sortListSmoothlty(head *ListNode) *ListNode {
 	l1 := sortListSmoothlty(head)
 	l2 := sortListSmoothlty(slow)
 
-	return merge(l1, l2)
+	return smerge(l1, l2)
 }
 
-func merge(l1, l2 *ListNode) *ListNode {
+func smerge(l1, l2 *ListNode) *ListNode {
 	dummy := &ListNode{0, nil}
 	cur := dummy
 
