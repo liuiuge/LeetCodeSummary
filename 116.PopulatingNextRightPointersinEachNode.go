@@ -4,7 +4,7 @@ package code
 
 /**
  * Definition for a Node.
- * type Node struct {
+ * type TreeNode struct {
  *     Val int
  *     Left *Node
  *     Right *Node
@@ -12,7 +12,7 @@ package code
  * }
  */
 
-func connect(root *Node) *Node {
+func connect(root *TreeNode) *TreeNode {
 	if root == nil {
 		return root
 	}
@@ -20,7 +20,7 @@ func connect(root *Node) *Node {
 	return root
 }
 
-func move(root) {
+func move(root *TreeNode) {
 	if root.Left == nil && root.Right == nil {
 		return
 	}

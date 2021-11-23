@@ -26,7 +26,7 @@ func delNodes(root *TreeNode, to_delete []int) []*TreeNode {
 
 func splitTree(check_map map[int]struct{}, root *TreeNode, result *[]*TreeNode, isNil bool) bool {
 	if root == nil {
-		return
+		return false
 	}
 	if _, ok := check_map[root.Val]; ok {
 		if root.Left != nil {
@@ -53,7 +53,7 @@ func splitTree(check_map map[int]struct{}, root *TreeNode, result *[]*TreeNode, 
 	if !keep {
 		root.Right = nil
 	}
-	if isNew {
+	if isNil {
 		*result = append(*result, root)
 	}
 	return true

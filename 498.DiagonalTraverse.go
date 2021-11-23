@@ -1,8 +1,6 @@
 package code
 
-import (
-	"fmt"
-)
+// "fmt"
 
 // https://leetcode.com/problems/diagonal-traverse/
 
